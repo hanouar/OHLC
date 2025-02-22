@@ -11,6 +11,9 @@ import joblib
 import matplotlib.pyplot as plt
 import streamlit as st
 
+# Define sequence_length globally
+sequence_length = 60
+
 # ------------------------
 # 1. Training and Saving Models
 # ------------------------
@@ -61,7 +64,6 @@ def train_and_save_models():
     joblib.dump(scaler_indicators, 'scaler_indicators.pkl')
 
     # Prepare LSTM Dataset
-    sequence_length = 60
     X_lstm, y_lstm = [], []
 
     for i in range(sequence_length, len(scaled_ohlc)):
