@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+tensorflow
+joblib
+matplotlib
+scikit-learn
+xgboost
+requests
